@@ -1,0 +1,36 @@
+  .up{
+    margin: 0 auto;
+    text-align: center ;
+    margin-top: 200px;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .fileName{
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding:15px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #7d61b4;
+    border: none;
+    width: 220px;
+  }
+  
+  .custom-file-upload {
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding:15px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #7a166d;
+    border: none;
+  }
+  
+  .file-search-button{
+    margin-top: 30px;
+  }
+  

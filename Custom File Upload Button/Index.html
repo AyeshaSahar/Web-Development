@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Button</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src=  'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'>  </script> 
+</head>
+
+<body>
+
+    <div class="up">
+
+        <div class="fileName">
+          <a>NO FILE SELECTED</a>
+        </div>
+
+        <div class="file-search-button">
+          <label for="file-upload" class="custom-file-upload">
+            <i class="fa fa-search"></i> BROWSE FOR A FILE
+          </label>
+          <input id="file-upload" type="file"/>
+        </div>
+    </div>
+
+          
+    <script>
+      $(".file-search-button").ready(function(){
+          $('input[type="file"]').change(function(e){
+              var fileName = e.target.files[0].name;
+              $(".fileName").html(fileName);
+          });
+      });
+  </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
