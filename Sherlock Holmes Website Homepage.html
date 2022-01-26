@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherlock Holmes</title>
+</head>
+
+<style>
+
+html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
+
+body{
+    margin:0; 
+    padding:0; 
+    font-size:13px; 
+    font-family:Georgia, "Times New Roman", Times, serif; 
+    color:#919191; 
+    background-color:#232323;}
+
+    .clear:after{
+        content:"."; 
+        display:block; 
+        height:0; 
+        clear:both;
+         visibility:hidden;
+          line-height:0;}
+
+.clear{
+    display:block;
+    clear:both;}
+
+html[xmlns] .clear{display:block;}
+* html .clear{height:1%;}
+
+a{
+    outline:none; 
+    text-decoration:none;}
+
+code{
+    font-weight:normal; 
+    font-style:normal; 
+    font-family:Georgia, 
+    "Times New Roman", Times, serif;}
+
+    .fl_left{
+        float:left;}
+
+        img{margin:0; 
+            padding:0;
+             border:none; 
+             line-height:normal;
+              vertical-align:middle;}
+
+.imgholder, .imgl, .imgr{
+    padding:4px; 
+    border:1px solid #D6D6D6;
+    text-align:center;}
+
+.imgl{
+    float:left; 
+    margin:0 15px 15px 0; 
+    clear:left;}
+
+.imgr{
+    float:right;
+     margin:0 0 15px 15px;
+     clear:right;}
+     
+ /*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+address, article, aside, figcaption, figure, footer, header, nav, section{display:block; margin:0; padding:0;}
+
+q{
+    display:block;
+     padding:0 10px 8px 10px; 
+     color:#979797; 
+     background-color:#ECECEC; 
+     font-style:italic; 
+     line-height:normal;}
+
+q:before{
+    content:'� '; 
+    font-size:26px;}
+
+q:after{
+    content:' �';
+     font-size:26px; 
+     line-height:0;}    
+
+/* ----------------------------------------------Wrapper-------------------------------------*/
+
+div.wrapper{
+    display:block; 
+    width:100%;
+     margin:0;
+      padding:0;
+       text-align:left;}
+
+.row1, .row1 a{
+    color:#C0BAB6;
+     background-color:#333333;}
+
+.row2{
+    color:#979797; 
+    background-color:#FFFFFF;}
+
+.row2 a{
+    color:blueviolet; 
+    background-color:#FFFFFF;}
+.row3, .row3 a{
+    color:#919191; 
+    background-color:#232323;}
+
+/*----------------------------------------------General-------------------------------------*/
+
+#header, #container, #footer{
+    display:block; 
+    width:960px; 
+    margin:0 auto;}
+
+nav ul{
+    margin:0; 
+    padding:0; 
+    list-style:none;}
+
+h1, h2, h3, h4, h5, h6{
+    margin:0; padding:0; 
+    font-size:22px; 
+    font-weight:normal;
+     font-style:italic; 
+     line-height:normal;}
+
+address{font-style:normal;}
+
+blockquote, q{
+    display:block;
+     padding:8px 10px;
+      color:#979797; 
+      background-color:#ECECEC; 
+      font-style:italic;
+       line-height:normal;}
+
+blockquote:before, q:before{
+    content:'� '; 
+    font-size:26px;}
+
+blockquote:after, q:after{
+    content:' �'; 
+    font-size:26px; 
+    line-height:0;}
+
+form, fieldset, legend{
+    margin:0; 
+    padding:0; 
+    border:none;}
+
+legend{
+    display:none;}
+
+input, textarea, select{
+    font-size:12px; 
+    font-family:Georgia,"Times New Roman",Times,serif;}
+
+.one_quarter, .two_quarter, .three_quarter, .four_quarter{
+    display:block; 
+    float:left;
+     margin:0 20px 0 0;}
+
+.one_quarter{
+    width:225px;}
+
+.two_quarter{
+    width:470px;}
+
+.three_quarter{
+    width:715px;}
+
+.four_quarter{
+    width:960px; 
+    float:none;
+     margin-right:0; 
+     clear:both;}
+   
+   
+
+.one_third, .two_third, .three_third{
+    display:block; 
+    float:left; 
+    margin:0 30px 0 0;}
+
+.one_third{
+    width:300px;}
+
+.two_third{
+    width:630px;}
+
+.three_third{
+    width:960px; 
+    float:none; 
+    margin-right:0;
+     clear:both;}   
+     
+/*----------------------------------------------Header-------------------------------------*/
+
+#header{
+    padding:20px 0;}
+
+#header #hgroup{
+    float:left; 
+    margin:0 0 20px 0;}
+
+#header #hgroup h1, #header #hgroup h2{
+    font-weight:normal; 
+    font-style:normal; 
+    text-transform:none;}
+
+#header #hgroup h1{
+    font-size:36px;}
+
+#header #hgroup h2{
+    font-size:13px;}
+
+#header form{
+    display:block; 
+    width:290px; 
+    float:right; 
+    margin:20px 0; padding:0;}
+
+#header form input{
+    display:block; 
+    float:left; 
+    width:200px;
+     margin:0; 
+     padding:5px; 
+     color:#C0BAB6; 
+     background-color:#232323; 
+     border:1px solid #666666;}
+
+#header form #sf_submit{
+    display:block; 
+    float:right; 
+    width:70px; 
+    font-size:12px; 
+    font-weight:bold; 
+    text-transform:uppercase; 
+    color:#FFFFFF;
+     background-color:blueviolet; 
+     border:none; 
+     cursor:pointer;}
+
+#header nav{
+    display:block;
+     width:100%; 
+     margin:0; 
+     padding:20px 0;
+      color:#C0BAB6; 
+      background-color:#232323;
+      clear:both;}
+
+#header nav ul{
+    padding:0 20px;}
+
+#header nav li{
+    display:inline;
+     margin-right:25px; 
+     text-transform:uppercase;}
+
+#header nav li.last{
+    margin-right:0;}
+
+#header nav li a{
+    color:#C0BAB6;
+     background-color:#232323;}
+
+#header nav li a:hover{
+    color: blueviolet; 
+    background-color:#232323;}
+
+/*----------------------------------------------Content Area-------------------------------------*/
+
+#container{
+    padding:30px 0;}
+
+#container section{
+    display:block; 
+    margin-bottom:30px; 
+    padding:0;}
+
+#container .last{
+    margin:0;}
+
+#container .more{
+    text-align:right;}
+
+/* ------Slider-----*/
+
+#container #slider{
+    width:100%;}
+
+#container #slider figure img{
+    float:right;
+     width:630px;
+     height:300px;}
+
+#container #slider figure figcaption{
+    display:block; 
+    float:left; 
+    width:290px; 
+    height:260px; 
+    padding:20px; 
+    overflow:hidden; 
+    color:#989898;
+     background-color:#464646;
+      line-height:1.6em;}
+
+#container #slider figure figcaption a{
+    color: blueviolet; 
+    background-color:#464646;}
+
+#container #slider figure h2{
+    font-size:42px; 
+    font-weight:normal; 
+    font-style:italic;
+     text-transform:none;}
+
+     /* ------Main Content-----*/
+
+#container #intro{
+    width:100%; 
+    margin-bottom:60px;
+    padding-bottom:20px; 
+    border-bottom:1px solid #D6D6D6;}
+
+#container #intro section{
+    width:100%;}
+
+#container #intro section article h2{
+    margin-bottom:15px;}
+
+#container #intro section article figure ul{
+    display:block; 
+    width:100%; 
+    margin:0; 
+    padding:0; 
+    list-style:none;}
+
+#container #intro section article figure ul li{
+    display:inline-block; 
+    float:left; 
+    margin:0 25px 0 0;}
+
+#container #intro section article figure ul li.last{
+    margin:0;}
+#container #intro section article figure ul li img{
+    width:130px; 
+    height:130px; 
+    margin:0;
+     padding:4px;
+      border:1px solid #D6D6D6;}
+
+#container #intro section article figure figcaption{
+    display:block; 
+    width:100%; 
+    margin-top:20px; 
+    clear:both; 
+    text-align:center;
+     text-transform:uppercase;
+      font-weight:bold;}
+
+#container #homepage{
+    display:block; 
+    width:100%; 
+    line-height:1.6em;}
+
+#container #homepage section{
+    margin-bottom:0;}
+
+#container #homepage section h2.title{
+    margin:0 0 25px 0; 
+    padding:0 0 8px 0;
+     font-size:16px; 
+     font-weight:bold;
+      text-transform:uppercase;}
+
+#container #homepage section footer{
+    clear:both;}
+
+/* ------Blogposts-----*/
+
+#container #homepage section article header h2{
+    font-size:13px; 
+    font-weight:bold;}
+
+#container #homepage section article address, #container #homepage section article time{
+    font-size:10px;
+     font-style:normal;}
+
+#container #homepage section article footer{
+    text-align:left;}
+
+ /* ------Quick Links-----*/
+
+#container #homepage section nav li{
+    margin:0 0 8px 0;
+     padding:0 0 5px 0; 
+     border-bottom:1px solid #D6D6D6;}
+
+#container #homepage section nav li.last{
+    margin:0;}
+
+#container #homepage section nav a{
+    padding:0 0 0 10px; 
+    background:url("../images/arrow.gif") left center no-repeat;}
+    
+ /*----------------------------------------------Footer-------------------------------------*/
+
+#footer{
+    padding:20px 0;}
+
+#footer p{
+    margin:0;
+     padding:0;}   
+     
+
+</style>
+
+<body>
+
+    <!--Header-->
+    <div class="wrapper row1">
+        <header id="header" class="clear">
+          <div id="hgroup">
+            <h1>Sherlock Holmes</h1>
+            <h2>221b-Bakers Street,London</h2>
+          </div>
+
+    <!--Form-->
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Search:</legend>
+            <input type="text" value="Search Our Website">
+            <input type="submit" id="sf_submit" value="submit">
+        </fieldset>
+    </form>
+
+    <!--navbar-->
+    <nav>
+        <ul>
+          <li><a href="#">A Study in Pink</a></li>
+          <li><a href="#">The Blind Banker</a></li>
+          <li><a href="#">His Last Vow</a></li>
+          <li><a href="#">The Great Game</a></li>
+          <li class="last"><a href="#">The Final Probem</a></li>
+        </ul>
+      </nav>
+
+    </header>
+  </div>    <!--Header and 1st div ends here-->
+
+  <!--Content-->
+  <div class="wrapper row2">
+    <div id="container" class="clear">
+
+        <!-- Slider -->
+        <section id="slider" class="clear">
+            <figure>
+                <img src="http://thenationroar.com/wp-content/uploads/2020/04/sherlock-tv-series-wallpaper-scaled.jpg" height="300px" width="600px">
+                <figcaption>
+                    <h2>Mr Holmes solve another case!</h2>
+                    <p>War vet Dr. John Watson returns to London in need of a place to stay. He meets Sherlock Holmes, a consulting detective, and the two soon dig into a string of serial "suicides."</p>
+                    <footer class="more"><a href="#">Read More &raquo;</a></footer>
+                  </figcaption>
+                </figure>
+              </section>
+
+
+    <!--Main Content-->
+       <div id="intro">
+       <section class="clear">
+
+        <!-- article 1 -->
+        <article class="two_quarter">
+            <h2>The Great Detective!</h2>
+            <p>Sherlock is commissioned by Mycroft to investigate the suspicious death of a government employee, who was working on a top-secret defence project: the Bruce-Partington Project. After rejecting the case and handing it over to John, Sherlock begins to be taunted by a criminal who puts his victims into explosive vests and sets Sherlock deadlines to solve the apparently unrelated cases, which include a twenty-year-old cold case involving the shoes of a drowned boy, the disappearance of a businessman, the death of a TV personality, and the assassination of a museum security guard by the "Golem".</p>
+          </article>
+
+          <!-- article 2 -->
+          <article class="two_quarter lastbox">
+            <figure>
+              <ul class="clear">
+                      <li><a href="#"><img src="https://www.indiewire.com/wp-content/uploads/2017/01/sherlock_s4_ep3_006-e1484529249271.jpg?w=780" width="150" height="130" ></a></li>
+                      <li><a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Benedict_Cumberbatch_filming_Sherlock_cropped2.jpg" width="150" height="130"></a></li>
+                      <li class="last"><a href="#"><img src="https://occ-0-92-1723.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABRMzeBhmEXej_0wWZrMqWimrhm96uPELvrgXYysq2orgutXjc711AWVDwAs6AAtyPqVyCilv4cPn1tx_FK2uBCfT9z91hnK7Mf-Otj_jirYPLQTf.jpg?r=8ab" width="150" height="130"></a></li>
+                    </ul>
+                    <figcaption><a href="#">View Our Image Gallery Here &raquo;</a></figcaption>
+                  </figure>
+                </article>
+              </section>
+            </div>
+
+    <!-- ########################################################################################## -->
+
+    <div id="homepage" class="last clear">
+        
+        <section class="one_quarter">
+          <h2 class="title">From The Blog</h2>
+          <article>
+            <header>
+              <h2>Post Title</h2>
+              <address>
+              <a href="#">Admin</a>, domainname.com
+              </address>
+              <time datetime="2000-04-06">Friday, 6<sup>th</sup> April 2000</time>
+            </header>
+            <p>Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.</p>
+            <footer class="more"><a href="#">Read More &raquo;</a></footer>
+          </article>
+        </section>
+
+        <section class="one_quarter">
+          <h2 class="title">Quick Links</h2>
+          <nav>
+            <ul>
+              <li><a href="#">A Scandal in Belgravia</a></li>
+              <li><a href="#">The Hounds of Baskerville</a></li>
+              <li><a href="#">The Reichenbach Fall</a></li>
+              <li><a href="#">The Sign of Three</a></li>
+              <li class="last"><a href="#">The Lying Detective</a></li>
+            </ul>
+          </nav>
+        </section>
+
+        <section class="two_quarterlastbox">
+          <h2 class="title">About US</h2>
+          <img class="imgl" src="https://resizing.flixster.com/ci1vGVE67x8KhlosPKRb8mi10xY=/300x300/v2/https://flxt.tmsimg.com/assets/p8204516_b_h9_ao.jpg" width="130" height="130" style="float: right;">
+          <p>Watson is Sherlock Holmes' best friend, assistant and, in most of the cases redacted by him, flatmate, and the first person narrator of all but four of these stories. He is described as a classic Victorian-era gentleman, unlike the more eccentric Holmes. He is astute and intelligent, although he fails to match his friend's deductive skills.
+
+            Whilst retaining his role as Holmes's friend and confidant, Watson has been adapted in various films, television series, video games, comics and radio programmes.</p>
+          <footer class="more"><a href="#">Read More &raquo;</a></footer>
+        </section>
+
+         </div>
+    </div>
+
+<!-- Footer -->
+<div class="wrapper row3">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - <a href="#">Sherlock Holmes</a></p>
+    </footer>
+  </div>
+
+       </div>
+   
+</body>
+
+</html>
