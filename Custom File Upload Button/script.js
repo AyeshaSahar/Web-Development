@@ -1,10 +1,10 @@
 const fileName = document.querySelector(".fileName");
 
-document
-    .querySelector("input[type=file]")
-    .addEventListener(
-        "change",
-        ({ target }) =>
-            (fileName.textContent =
-                target.files?.[0]?.name ?? "NO FILE SELECTED"),
-    );
+const fileInput = document.querySelector("input[type=file]");
+fileInput.addEventListener("change", function() {
+    if (this.files && this.files[0]) {
+        fileName.innerHTML = this.files[0].name;
+    }
+});
+
+
