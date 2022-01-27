@@ -1,18 +1,10 @@
-button.addEventListener('click', (e) => {
-    e.preventDefault();
-    $wrapper.classList.toggle('toggled');
-  });
-  
-    function readURL(input) {
-      if (input.files && input.files[0]) {
-          var reader = new FileReader();
-          reader.onload = function (e) {
-              $('#blah')
-                  .attr('src', e.target.result);
-          };
-          reader.readAsDataURL(input.files[0]);
-      }
-  }
+const fileName = document.querySelector(".fileName");
 
-
-  
+document
+    .querySelector("input[type=file]")
+    .addEventListener(
+        "change",
+        ({ target }) =>
+            (fileName.textContent =
+                target.files?.[0]?.name ?? "NO FILE SELECTED"),
+    );
